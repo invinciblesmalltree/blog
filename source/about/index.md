@@ -24,6 +24,10 @@ title: 关于
 
 ~~当然，我也是一名不折不扣的 Mi fan 。~~
 
+### 订阅
+
+本博客支持 Atom 订阅，订阅链接：[https://blog.insmtr.cn/atom.xml](https://blog.insmtr.cn/atom.xml)。
+
 ### 联系我
 
 我在多个社交媒体有账号，以下是我常用的社交媒体账号：

@@ -102,3 +102,8 @@ theme: flexblock
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ''
+
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
