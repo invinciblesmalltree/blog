@@ -1,0 +1,14 @@
+[
+    {
+        "name": "OI Wiki",
+        "description": "一个信息竞赛知识整合站点，陪伴我走过了整个高中。",
+        "image": "https://oi-wiki.org/favicon.ico",
+        "url": "https://oi-wiki.org/"
+    },
+    {
+        "name": "Elec Wiki",
+        "description": "橙子学长创立的以电子信息相关知识为主的百科网站。",
+        "image": "https://elec-wiki.org/assets/images/favicon.png",
+        "url": "https://elec-wiki.org/"
+    }
+]

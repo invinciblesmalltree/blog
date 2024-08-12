@@ -1,0 +1,97 @@
+<!-- footer container -->
+<footer id="footer" class="footer">
+  <div class="footer-container">
+    <% if (theme.social_icon.enable) { %>
+    <div class="social-icons">
+      <% for (var i in theme.social_icon.icons) { %>
+        <% if (theme.social_icon.icons[i]) { %>
+          <a href="<%= theme.social_icon.icons[i] %>" class="soft-size--primary soft-style--box" target="_blank" rel="noopener noreferrer">
+            <%- partial("../_svg/social-"+ i +".svg") %>
+          </a>
+        <% } %>
+      <% } %>
+    </div>
+    <% } %> 
+    <p>&copy; <%= date(new Date(), 'YYYY') %> <a href="/" target="_blank"><%= config.author %></a></p>
+
+    <% if (theme.beian) { %>
+      <p><a href="https://beian.miit.gov.cn" target="_blank"><%= theme.beian %></a></p>
+    <% } %>
+
+    <p><a href="https://icp.gov.moe/?keyword=20248443" target="_blank">萌ICP备20248443号</a></p>
+
+    <p>本博客由开源博客网站框架 <a href="https://hexo.io" target="_blank" rel="noopener noreferrer">Hexo</a> 驱动，主题 - <a href="https://github.com/miiiku/flex-block" target="_blank" rel="noopener noreferrer author">flex-block</a></p>
+
+    <p>
+      <a href="javascript:;" id="theme-light">🌔 浅色</a>
+      <a href="javascript:;" id="theme-auto">🌓 自动</a>
+      <a href="javascript:;" id="theme-dark">🌒 深色</a>
+    </p>
+  </div>
+
+  <div id="wechatModal" class="modal">
+    <div class="modal-content">
+      <span class="close" title="关闭">&times;</span>
+      <img class="wechat_qr_img" src="/images/wechat-qrcode.png" alt="微信二维码">
+    </div>
+  </div>
+</footer>
+
+<style>
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 120px;
+  }
+  .modal-content {
+    position: relative;
+    margin: 5% auto;
+    display: block;
+    width: 80%;
+    max-width: 300px;
+  }
+  .wechat_qr_img{
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+  }
+  .close {
+    position: absolute;
+    right: 42px;
+    top: 25px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+  }
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+</style>
+
+<script>
+  var wechat_button = document.getElementsByClassName('icon-wechat')[0].parentElement;
+  wechat_button.onclick = function() {
+    document.getElementById('wechatModal').style.display = "block";
+  }
+  wechat_button.removeAttribute('href');
+  var modal = document.getElementById('wechatModal');
+  var span = document.getElementsByClassName('close')[0];
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>

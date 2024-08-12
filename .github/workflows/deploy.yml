@@ -1,0 +1,30 @@
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - run: |
+          npm install
+          cp -r ./source/layout/ ./node_modules/hexo-theme-flexblock/
+          cp -r ./source/css/ ./node_modules/hexo-theme-flexblock/source/
+          rm -rf ./source/layout/ ./source/css/ ./node_modules/hexo-theme-flexblock/_config.yml
+          sed -i 's/LEANCLOUD_KEY/${{ secrets.LEANCLOUD_KEY }}/g' _config.flexblock.yml
+          npx hexo g
+
+      - uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: 62af2ba175c79a4c0c8a7c14bc999586
+          projectName: blog
+          directory: ./public
