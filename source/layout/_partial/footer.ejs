@@ -94,4 +94,13 @@
       modal.style.display = "none";
     }
   }
+
+  var qq_button = document.getElementsByClassName('icon-qq')[0].parentElement;
+  var uag = navigator.userAgent;
+  var ipad = uag.match(/(iPad).*OS\s([\d_]+)/), isMqVer = !ipad && uag.match(/(iPhone\sOS)\s([\d_]+)/) || uag.match(/(Android)\s+([\d.]+)/);
+  if (isMqVer) {
+    qq_button.href = "mqqapi://card/show_pslcard?src_type=internal&version=1&uin=2581283397&card_type=person&source=sharecard";
+  } else {
+    qq_button.href = "tencent://message/?uin=2581283397&Site=QQ&Menu=yes";
+  }
 </script>
