@@ -31,7 +31,7 @@ comments:
   # 这里appId和appKey一定一定要改成自己的，没有的话去 https://leancloud.cn 这个网站注册创建一个
   valine:
     appId: nEYGG8sZlD4Pff9VPCiICVaP-MdYXbMMI
-    appKey: LEANCLOUD_KEY
+    appKey: ${{ secrets.LEANCLOUD_KEY }}
     placeholder: 随便说点什么叭～ # 评论框占位提示符
     avatar: mp # Gravatar 头像展示方式
     pageSize: 10 # 评论列表分页，每页条数
