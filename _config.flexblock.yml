@@ -32,6 +32,7 @@ comments:
   valine:
     appId: nEYGG8sZlD4Pff9VPCiICVaP-MdYXbMMI
     appKey: ${{ secrets.LEANCLOUD_KEY }}
+    serverURLs: "https://neygg8sz.api.lncldglobal.com"
     placeholder: 随便说点什么叭～ # 评论框占位提示符
     avatar: mp # Gravatar 头像展示方式
     pageSize: 10 # 评论列表分页，每页条数
