@@ -41,3 +41,7 @@ title: 关于
 - B 站: [无敌小束](https://space.bilibili.com/599517677)
 
 - Telegram: [insmtr](https://t.me/insmtr)
+
+### Banner 图片
+
+出自插画师 [torino](https://www.pixiv.net/users/1960050) 之手，作品链接：[https://www.pixiv.net/artworks/96866905](https://www.pixiv.net/artworks/96866905)
