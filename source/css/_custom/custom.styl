@@ -9,14 +9,25 @@
 .warning-fold > summary {
   cursor: pointer;
   font-weight: bold;
-  color: #d32f2f;
+  color: #d32f2f !important;
 }
 
 .warning-fold[open] > summary {
-  color: #b71c1c;
+  background-color: #ffebee !important;
+  color: #b71c1c !important;
 }
 
 .warning-fold > div {
   margin-top: 10px;
   color: #b71c1c;
+}
+
+.warning-fold summary::marker {
+  content: "➕ ";
+  font-size: 1.2em;
+}
+
+.warning-fold[open] summary::marker {
+  content: "➖ ";
+  font-size: 1.2em;
 }
