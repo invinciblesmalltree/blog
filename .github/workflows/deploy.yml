@@ -15,12 +15,9 @@ jobs:
           node-version: '20'
 
       - run: |
-          npm install
-          cp -r ./source/layout/ ./node_modules/hexo-theme-flexblock/
-          cp -r ./source/css/ ./node_modules/hexo-theme-flexblock/source/
-          rm -rf ./source/layout/ ./source/css/ ./node_modules/hexo-theme-flexblock/_config.yml
-          sed -i 's/LEANCLOUD_KEY/${{ secrets.LEANCLOUD_KEY }}/g' _config.flexblock.yml
-          npx hexo g
+          npm install hexo
+          sed -i 's/LEANCLOUD_KEY/${{ secrets.LEANCLOUD_KEY }}/g' themes/flexblock/_config.yml
+          hexo g
 
       - uses: cloudflare/pages-action@v1
         with:
