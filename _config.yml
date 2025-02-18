@@ -45,8 +45,10 @@ relative_link: false
 future: true
 syntax_highlighter: shiki
 shiki:
-  theme: "catppuccin-latte"
-  strip_indent: true
+  theme:
+    light: "github-light-default"
+    dark: "github-dark-default"
+  default_color: false
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')

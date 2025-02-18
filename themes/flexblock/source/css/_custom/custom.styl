@@ -33,11 +33,11 @@
 }
 
 pre.shiki {
-    padding-top: 4px;
-    padding-bottom: 4px;
+    padding-top: 8px;
+    padding-bottom: 8px;
     margin-top: 10px;
     margin-bottom: 10px;
-    border-radius: 7px;
+    border-radius: 8px;
     overflow-x: auto;
     white-space: pre;
     scrollbar-width: thin;
@@ -84,16 +84,14 @@ pre.shiki ::-moz-selection {
 
 pre.shiki code .line {
     counter-increment: codeblock-line;
-    padding: 0 5px;
     white-space: pre
 }
 
 pre.shiki code .line::before {
     content: counter(codeblock-line);
     display: inline-block;
-    padding-left: 10px;
-    padding-right: 20px;
-    width: 50px;
+    padding-right: 15px;
+    width: 45px;
     color: #999;
     text-align: right;
 }
@@ -102,4 +100,26 @@ pre.shiki code .line.marked {
     background-color: #65758529;
     width: 100%;
     display: inline-block;
+}
+
+html.theme-light {
+  .shiki,
+  .shiki span {
+    color: var(--shiki-light);
+    background-color: var(--shiki-light-bg);
+    font-style: var(--shiki-light-font-style);
+    font-weight: var(--shiki-light-font-weight);
+    text-decoration: var(--shiki-light-text-decoration);
+  }
+}
+
+html.theme-dark {
+  .shiki,
+  .shiki span {
+    color: var(--shiki-dark);
+    background-color: var(--shiki-dark-bg);
+    font-style: var(--shiki-dark-font-style);
+    font-weight: var(--shiki-dark-font-weight);
+    text-decoration: var(--shiki-dark-text-decoration);
+  }
 }
