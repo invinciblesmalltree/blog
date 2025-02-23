@@ -22,5 +22,11 @@
         "description": "彬红茶的纸张生活日常",
         "image": "https://cn-sy1.rains3.com/binhongtea/studio2.png",
         "url": "https://www.redcha.cn/"
+    },
+    {
+        "name": "tzchz",
+        "description": "Enjoy coding life",
+        "image": "https://www.chz.one/wp-content/uploads/2021/04/image.jpeg",
+        "url": "https://www.chz.one/"
     }
 ]
