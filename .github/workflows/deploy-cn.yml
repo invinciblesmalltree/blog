@@ -1,0 +1,35 @@
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - run: |
+          sudo snap install yq
+          yq e '.url = "https://blog.insmtr.cn"' -i _config.yml
+          yq e 'del(.comments.use)' -i themes/flexblock/_config.yml
+          yq e 'del(.social_icon.icons.telegram)' -i themes/flexblock/_config.yml
+          sed -i '/^- Telegram:/{N;d}' source/about/index.md
+          rm -rf "source/_posts/2024.12.16 Box for root.md" "source/images/2024.12.16 Box for root"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - run: |
+          npm install
+          npx hexo g
+
+      - uses: manyuanrong/setup-ossutil@v2.0
+        with:
+          endpoint: "oss-cn-shanghai.aliyuncs.com"
+          access-key-id: ${{ secrets.ALIYUN_ACCESS_KEY_ID }}
+          access-key-secret: ${{ secrets.ALIYUN_ACCESS_KEY_SECRET }}
+
+      - run: ossutil cp -rf ./public oss://insmtr-blog
