@@ -102,7 +102,7 @@ social_icon:
   enable: true
   icons:
     wechat  : insmtr
-    qq      : tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2581283397
+    qq      : https://qm.qq.com/q/gjnAt4Cki4
     bilibili: https://space.bilibili.com/599517677
     github  : https://github.com/invinciblesmalltree
     telegram: https://t.me/insmtr
