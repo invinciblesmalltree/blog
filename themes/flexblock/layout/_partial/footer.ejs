@@ -14,8 +14,15 @@
     <% } %> 
     <p>&copy; <%= date(new Date(), 'YYYY') %> <a href="/" target="_blank"><%= config.author %></a></p>
 
-    <% if (theme.beian) { %>
-      <p><a href="https://beian.miit.gov.cn" target="_blank"><%= theme.beian %></a></p>
+    <% if (theme.beian.miit) { %>
+      <p><a href="https://beian.miit.gov.cn" target="_blank"><%= theme.beian.miit %></a></p>
+    <% } %>
+
+    <% if (theme.beian.mps) { %>
+      <dev style="display: flex; align-items: center; justify-content: center; gap: 5px;">
+        <img src="/images/mps.png" style="width: 16px;">
+        <p><a href="https://beian.mps.gov.cn/#/query/webSearch?code=<%= theme.beian.mps.code %>" rel="noreferrer" target="_blank"><%= theme.beian.mps.show %></a></p>
+      </dev>
     <% } %>
 
     <p><a href="https://icp.gov.moe/?keyword=20252345" target="_blank">萌ICP备20252345号</a></p>

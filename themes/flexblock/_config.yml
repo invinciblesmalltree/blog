@@ -84,6 +84,8 @@ jsdelivr_mirror:
 
 # 国内备案信息
 beian:
+  miit:
+  mps:
 
 # 谷歌分析
 google_analytics:

@@ -13,7 +13,9 @@ jobs:
       - run: |
           sudo snap install yq
           yq e '.url = "https://blog.insmtr.cn"' -i _config.yml
-          yq e '.beian = "苏ICP备2025166847号"' -i themes/flexblock/_config.yml
+          yq e '.beian.miit = "苏ICP备2025166847号"' -i themes/flexblock/_config.yml
+          yq e '.beian.mps.show = "苏公网安备32068102810372号"' -i themes/flexblock/_config.yml
+          yq e '.beian.mps.code = "32068102810372"' -i themes/flexblock/_config.yml
           yq e 'del(.comments.use)' -i themes/flexblock/_config.yml
           yq e 'del(.social_icon.icons.telegram)' -i themes/flexblock/_config.yml
           sed -i '/^- Telegram:/{N;d}' source/about/index.md
