@@ -32,6 +32,40 @@
   font-size: 1.2em;
 }
 
+.info-fold {
+  margin: 1em 0;
+  padding: 10px;
+  border: 1px solid #ff5783;
+  background-color: #ffe7e7;
+  border-radius: 5px;
+}
+
+.info-fold > summary {
+  cursor: pointer;
+  font-weight: bold;
+  color: #ff5783 !important;
+}
+
+.info-fold[open] > summary {
+  background-color: #ffe7e7 !important;
+  color: #ff5783 !important;
+}
+
+.info-fold > div {
+  margin-top: 10px;
+  color: #ff5783;
+}
+
+.info-fold summary::marker {
+  content: "➕ ";
+  font-size: 1.2em;
+}
+
+.info-fold[open] summary::marker {
+  content: "➖ ";
+  font-size: 1.2em;
+}
+
 code {
   border-radius: 4px;
 }
