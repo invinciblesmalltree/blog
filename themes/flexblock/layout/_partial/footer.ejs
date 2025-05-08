@@ -88,17 +88,21 @@
 <script>
   var wechat_button = document.getElementsByClassName('icon-wechat')[0].parentElement;
   wechat_button.onclick = function() {
-    document.getElementById('wechatModal').style.display = "block";
+    const wechat_modal = document.getElementById('wechatModal')
+    wechat_modal.style.display = 'block';
+    wechat_modal.style.userSelect = 'none';
+    wechat_modal.style.webkitUserSelect = 'none';
+    wechat_modal.style.msUserSelect = 'none';
   }
   wechat_button.removeAttribute('href');
   var modal = document.getElementById('wechatModal');
   var span = document.getElementsByClassName('close')[0];
   span.onclick = function() {
-    modal.style.display = "none";
+    modal.style.display = 'none';
   }
   window.onclick = function(event) {
     if (event.target == modal) {
-      modal.style.display = "none";
+      modal.style.display = 'none';
     }
   }
 </script>

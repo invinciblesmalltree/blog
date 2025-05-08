@@ -34,7 +34,7 @@ title: 关于
 
 - Github: [invinciblesmalltree](https://github.com/invinciblesmalltree)
 
-- 微信: insmtr
+- 微信: <a href="javascript:void(0);" id="wechatLink">insmtr</a>
 
 - QQ: [2581283397](tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2581283397)
 
@@ -45,3 +45,15 @@ title: 关于
 ### Banner 图片
 
 出自插画师 [torino](https://www.pixiv.net/users/1960050) 之手，作品链接：[https://www.pixiv.net/artworks/96866905](https://www.pixiv.net/artworks/96866905)
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const link = document.getElementById('wechatLink');
+    const button = document.getElementsByClassName('icon-wechat')[0].parentElement;
+
+    link.addEventListener('click', function(event) {
+      event.preventDefault();
+      button.click();
+    });
+  });
+</script>
