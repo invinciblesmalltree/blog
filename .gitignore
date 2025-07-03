@@ -4,6 +4,7 @@ db.json
 *.log
 node_modules/
 package-lock.json
+pnpm-lock.yaml
 public/
 .deploy*/
 _multiconfig.yml

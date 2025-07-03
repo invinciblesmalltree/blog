@@ -18,15 +18,21 @@
         "url": "https://seandictionary.top/"
     },
     {
-        "name": "顶茶社",
+        "name": "彬红茶博客",
         "description": "乌拉乌拉乌拉",
-        "image": "https://www.toptea.xin/favicon.ico",
-        "url": "https://www.toptea.xin/"
+        "image": "https://blog.redcha.cn/favicon.ico",
+        "url": "https://blog.redcha.cn/"
     },
     {
         "name": "tzchz",
         "description": "Enjoy coding life",
         "image": "https://www.chz.one/wp-content/uploads/2021/04/image.jpeg",
         "url": "https://www.chz.one/"
+    },
+    {
+        "name": "彬红茶日记",
+        "description": "个人生活笔记📒",
+        "image": "https://note.redcha.cn/favicon.ico",
+        "url": "https://note.redcha.cn/"
     }
 ]
