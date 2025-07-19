@@ -34,5 +34,11 @@
         "description": "个人生活笔记📒",
         "image": "https://note.redcha.cn/favicon.ico",
         "url": "https://note.redcha.cn/"
+    },
+    {
+        "name": "微光zc的网络小窝",
+        "description": "世界全剧终，欢迎来到my blog!",
+        "image": "https://wzcwzc10.github.io/img/jufufu-ht.gif",
+        "url": "https://wzcwzc10.github.io/"
     }
 ]
