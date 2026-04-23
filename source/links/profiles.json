@@ -40,5 +40,11 @@
         "description": "世界全剧终，欢迎来到my blog!",
         "image": "https://wzcwzc10.github.io/img/jufufu-ht.gif",
         "url": "https://wzcwzc10.github.io/"
+    },
+    {
+        "name": "Liseezn'blog",
+        "description": "分享个人学习，项目，及一些教程",
+        "image": "https://blog.liseezn.top/logo.webp",
+        "url": "https://blog.liseezn.top/logo.webp/"
     }
 ]
